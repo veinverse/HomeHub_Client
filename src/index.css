@@ -10,3 +10,8 @@
 body {
   font-family: "Poppins";
 }
+
+/* CUSTOM TAILWIND CLASSES */
+.partners__logo {
+  @apply w-[82px] h-[78px] lg:w-[150px] lg:h-[140px];
+}
