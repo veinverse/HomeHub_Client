@@ -15,3 +15,46 @@ body {
 .partners__logo {
   @apply w-[82px] h-[78px] lg:w-[150px] lg:h-[140px];
 }
+
+.navbar__login__btn {
+  @apply font-semibold ring-2 ring-[#2A4953] rounded hover:text-white hover:bg-[#2A4953]
+}
+
+
+/* css for bfr cards */
+
+.bfr__card__image {
+  @apply w-96 h-[532px] mix-blend-overlay
+}
+.bfr__card__text__container {
+  @apply flex justify-between px-4 absolute top-[30rem] lg:w-96 w-full
+}
+.bfr__card__title {
+  @apply lg:text-[26px] lg:leading-[42px] text-[20px]
+}
+.bfr__card__svg__size {
+  @apply lg:h-5 w-5 h-4
+}
+.bfr__card__info {
+  @apply absolute opacity-0 group-hover:opacity-100 p-14 text-center h-[532px] lg:w-96 bg-black bg-opacity-50
+}
+
+/* end of css for bfr cards */
+
+
+/* css for filterbar */
+
+.filterbar__children, .filterbar__child {
+  @apply flex flex-row
+}
+.filterbar__child__title {
+  @apply font-medium
+}
+.filterbar__dropdown {
+  @apply bg-transparent cursor-pointer font-light pr-1 border-none border-0 w-auto
+}
+.filterbar__option {
+  @apply text-sm bg-white text-[#2A4953] px-4 py-2 cursor-pointer
+}
+
+/* end of css for filterbar */

@@ -4,13 +4,13 @@ const FilterBar = ({ locations, properties }) => {
   return (
     <>
       <div className="flex flex-col items-center text-white -mt-11 mb-6 hidden md:flex">
-        <div className="w-80 h-11 bg-[#2A4953] rounded-t-lg w-full grid grid-cols-3 content-around text-center bg-opacity-90 cursor-pointer">
-          <h3>Sell</h3>
-          <h3>Buy</h3>
-          <h3>Rent</h3>
+        <div className="w-80 h-11 bg-[#2A4953] rounded-t-lg w-full grid grid-cols-3 content-around bg-opacity-90 cursor-pointer">
+          <button className="hy-11 rounded-tl-lg">Sell</button>
+          <button className="h-11">Buy</button>
+          <button className="h-11 rounded-tr-lg">Rent</button>
         </div>
-        <div className="flex flex-row justify-between items-center py-7 px-9 bg-[#2A4953] lg:w-3/5 rounded-lg bg-opacity-90">
-          <div className="flex flex-row">
+        <div className="filterbar__children justify-between items-center p-6 px-9 md:gap-2 bg-[#2A4953] lg:w-3/5 rounded-lg bg-opacity-90">
+          <div className="filterbar__child">
             <svg
               width="38"
               height="38"
@@ -30,14 +30,14 @@ const FilterBar = ({ locations, properties }) => {
               />
             </svg>
             <div className="pl-2">
-              <h2 className="title font-medium">Location</h2>
+              <h2 className="filterbar__child__title">Location</h2>
               {/* Dropdown menu */}
-              <select className="bg-transparent cursor-pointer font-light pr-1 border-none	border-0 w-auto">
+              <select className="filterbar__dropdown">
                 {locations &&
                   locations.map((location) => (
                     <option
                       key={location.id}
-                      className="text-sm bg-white text-[#2A4953] px-4 py-2 cursor-pointer"
+                      className="filterbar__option"
                     >
                       {" "}
                       {location.place}{" "}
@@ -47,7 +47,7 @@ const FilterBar = ({ locations, properties }) => {
             </div>
           </div>
 
-          <div className="flex flex-row">
+          <div className="filterbar__child">
             <svg
               width="36"
               height="36"
@@ -65,14 +65,14 @@ const FilterBar = ({ locations, properties }) => {
               />
             </svg>
             <div className="pl-2">
-              <h2 className="title font-medium">Property Type</h2>
+              <h2 className="filterbar__child__title">Property Type</h2>
               {/* Dropdown menu */}
-              <select className="bg-transparent cursor-pointer font-light pr-1 border-none border-0 w-auto">
+              <select className="filterbar__dropdown">
                 {properties &&
                   properties.map((property) => (
                     <option
                       key={property.id}
-                      className="text-sm bg-white text-[#2A4953] px-4 py-2 cursor-pointer"
+                      className="filterbar__option"
                     >
                       {property.pty}
                     </option>
@@ -81,7 +81,7 @@ const FilterBar = ({ locations, properties }) => {
             </div>
           </div>
 
-          <div className="flex flex-row">
+          <div className="filterbar__child">
             <svg
               width="36"
               height="36"
@@ -96,8 +96,8 @@ const FilterBar = ({ locations, properties }) => {
             </svg>
 
             <div className="pl-2">
-              <h2 className="title font-medium">Max. Price</h2>
-              <p className="type">GHC3000.00</p>
+              <h2 className="filterbar__child__title">Max. Price</h2>
+              <p className="type">GHC <input type="number" className="rounded-sm bg-transparent border border-white w-[75px]" /></p>
             </div>
           </div>
           <div>
