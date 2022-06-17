@@ -11,7 +11,7 @@ const Hero = () => {
   return (
     <>
       <div
-        className="flex justify-center lg:h-[100vh] h-[full] w-full py-24"
+        className="flex justify-center lg:h-[732px] h-[616px] w-full py-24"
         style={backgroundImageStyle}
       >
         <div className="flex flex-col items-center text-center p-5 lg:p-8 text-white">

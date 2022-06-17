@@ -1,13 +1,46 @@
+import { useState } from 'react';
 import sb from "../../photos/sb.png";
 
 const FilterBar = ({ locations, properties }) => {
+  const [isActive, setIsActive] = useState("");
+
+  const handleClick = ( buttonTitle ) => {
+    if (isActive === buttonTitle) {
+      setIsActive("");
+    }
+    else {
+      setIsActive(buttonTitle);
+    }
+  };
+  
   return (
     <>
       <div className="flex flex-col items-center text-white -mt-11 mb-6 hidden md:flex">
         <div className="w-80 h-11 bg-[#2A4953] rounded-t-lg w-full grid grid-cols-3 content-around bg-opacity-90 cursor-pointer">
-          <button className="hy-11 rounded-tl-lg">Sell</button>
-          <button className="h-11">Buy</button>
-          <button className="h-11 rounded-tr-lg">Rent</button>
+          <button 
+            className="hy-11 rounded-tl-lg" 
+            name="sell-btn" 
+            style={{ backgroundColor: isActive === "sell" ? "#ffffff" : "", color: isActive === "sell" ? "#2A4953" : "" }} 
+            onClick={() => handleClick("sell")}
+          >
+            Sell
+          </button>
+          <button 
+            className="h-11" 
+            name="buy-btn" 
+            style={{ backgroundColor: isActive === "buy" ? "#ffffff" : "", color: isActive === "buy" ? "#2A4953" : "" }} 
+            onClick={() => handleClick("buy")}
+          >
+            Buy
+          </button>
+          <button 
+            className="h-11 rounded-tr-lg" 
+            name="rent-btn" 
+            style={{ backgroundColor: isActive === "rent" ? "#ffffff" : "", color: isActive === "rent" ? "#2A4953" : "" }} 
+            onClick={() => handleClick("rent")}
+          >
+            Rent
+          </button>
         </div>
         <div className="filterbar__children justify-between items-center p-6 px-9 md:gap-2 bg-[#2A4953] lg:w-3/5 rounded-lg bg-opacity-90">
           <div className="filterbar__child">
