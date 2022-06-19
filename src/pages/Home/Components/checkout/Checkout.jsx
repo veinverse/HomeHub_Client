@@ -65,7 +65,6 @@ const Prev=()=>{
       
       <div className="flex overflow-hidden ">
 {home.map(h=>(
-        
      h.id>currentIndex ? <div className="flex self-center ss:self-start mx-[2%] ss:ml-[64px] mt-[44px] px-[22px] flex-col w-[281px] h-[381px] rounded-[15px] shadow bg-secondary">
           <img className="rounded-[15px] ml-[-1px] w-[239px] h-[196px] mt-[20px]" src={house} alt="Home" />
           <h1 className="mt-[8px] w-[151px] h-[26px] font-semibold font-sans text-[17px] leading-[25.5px] text-black">{h.name}</h1>
@@ -97,8 +96,8 @@ const Prev=()=>{
         </div>:''))}
       </div>
       <div className="flex mt-[79px] justify-center">
-  <button onClick={Prev} className={currentIndex>0 ?'rounded-full h-[50px] w-[50px] text-[30px] text-white font-sans font-bold text-center border-2  bg-brown_d':'rounded-full h-[50px] w-[50px] text-[30px] font-sans font-semibold text-center border-2 border-black'} >&#60;</button>
-  <button onClick={Next} className={currentIndex<length-show?"ml-[19px] rounded-full h-[50px] w-[50px] text-[30px] text-white font-sans font-bold text-center border-2  bg-brown_d":'ml-[19px] rounded-full h-[50px] w-[50px] text-[30px] font-sans font-semibold text-center border-2 border-black'}>&#62;</button>
+  <button onClick={currentIndex>0 && Prev} className={currentIndex>0 ?'rounded-full h-[50px] w-[50px] text-[30px] text-white font-sans font-bold text-center border-2  bg-brown_d':'cursor-not-allowed rounded-full h-[50px] w-[50px] text-[30px] font-sans font-semibold text-center border-2 border-black'} >&#60;</button>
+  <button onClick={currentIndex<length-show && Next} className={currentIndex<length-show?"ml-[19px] rounded-full h-[50px] w-[50px] text-[30px] text-white font-sans font-bold text-center border-2  bg-brown_d":'cursor-not-allowed ml-[19px] rounded-full h-[50px] w-[50px] text-[30px] font-sans font-semibold text-center border-2 border-black'}>&#62;</button>
       </div>
     </div>
   );
