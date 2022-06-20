@@ -50,8 +50,8 @@ const Prev=()=>{
   setCurrentIndex(prevState => prevState -1)
 }
   return (
-    <div className="bg-checkout bg-cover h-[881px] w-full">
-      <h1 className="text-[#563523] text-[25px] sm:text-[40px] font-sans  font-bold pt-[34px] sm:pt-[55px] ml-[11px] sm:ml-[43px] leading-[37.5px] sm:leading-[60px] text-center s1:text-left align-top w-full h-[38px] sm:w-[423px] sm:h-[120px]">Checkout Our Latest Listings</h1>
+    <div className="bg-checkout bg-cover h-[881px]">
+      <h1 className="text-[#563523] text-[25px] sm:text-[40px] font-sans  font-bold pt-[34px] sm:pt-[55px] ml-[11px] sm:ml-[43px] leading-[37.5px] sm:leading-[60px] text-center s1:text-left align-top  h-[38px] sm:w-[423px] sm:h-[120px]">Checkout Our Latest Listings</h1>
       <div className="flex justify-between ml-[10%] s1:ml-[0px]">
         <div className="pt-[70px] ss:pt-[40px] sm:pt-[70px] justify-left s1:ml-[4px] md:ml-[43px] flex flex-wrap">
           {lists.map((list) => (<div className={`${list.id === active ? "mt-[10px] sm:mt-[17px]  sm:text-[18px] font-Poppins font-normal leading-[27px] items-center justify-center px-[10px] sm:px-[0px]  mr-[19px] w-max sm:w-[149px] h-[32px] sm:h-[54px] flex rounded-[24px] cursor-pointer shadow bg-gradient-to-r from-white text-[#000000] bg-brown_l" :
