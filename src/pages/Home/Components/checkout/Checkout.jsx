@@ -75,15 +75,15 @@ const Prev=()=>{
           <div className="flex mt-[14px]">
             <div className="flex">
               <img className="w-[22px] h-[18px] " src={bed} alt="bed" />
-              <h1 className="ml-[6px] h-[18px] font-sans font-normal text-[12px] leading-[18px] text-black">{h.bed} Bed</h1>
+              <h1 className="ml-[2px] h-[18px] font-sans font-normal text-[12px] leading-[18px] text-black">{h.bed} Bed</h1>
             </div>
             <div className="flex ml-[19.5px]">
               <img className="w-[18px] h-[18px]" src={bath} alt="bath" />
-              <h1 className="ml-[8px] h-[18px] font-sans font-normal text-[12px] leading-[18px] text-black ">{h.bath} Bath</h1>
+              <h1 className="ml-[2px] h-[18px] font-sans font-normal text-[12px] leading-[18px] text-black ">{h.bath} Bath</h1>
             </div>
             <div className="flex ml-[18px]">
               <img className="w-[18px] h-[18px]" src={ruler} alt="ruler" />
-              <h1 className="ml-[5px] h-[18px] font-sans font-normal text-[12px] leading-[18px] text-black">{h.ft} sqft</h1>
+              <h1 className="ml-[2px] h-[18px] font-sans font-normal text-[12px] leading-[18px] text-black">{h.ft} sqft</h1>
             </div>
           </div>
           <div className="flex mt-[32px]">
